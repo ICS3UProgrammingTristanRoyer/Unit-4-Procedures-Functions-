@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47B58F91-D943-43D7-B009-D7DDF3DA1BAA}</ProjectGuid>
+    <ProjectGuid>{65B6251B-771B-4669-AEEB-F53B93D4B400}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ConvertToFareTristanR</RootNamespace>
-    <AssemblyName>ConvertToFareTristanR</AssemblyName>
+    <RootNamespace>PassByRefTristanR</RootNamespace>
+    <AssemblyName>PassByRefTristanR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,17 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConvertToFareForm.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConvertToFareForm.Designer.cs">
-      <DependentUpon>ConvertToFareForm.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConvertToFare.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConvertToFareForm.resx">
-      <DependentUpon>ConvertToFareForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
