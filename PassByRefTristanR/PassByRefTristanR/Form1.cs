@@ -1,5 +1,5 @@
 ﻿/*
- * Created by: Tristan Roye
+ * Created by: Tristan Royer
  * Created on: 19 - 11 - 18
  * Created for: ICS3U Programming
  * Daily Assignment – Day #31 - Rounding Program
@@ -18,9 +18,9 @@ using System.Windows.Forms;
 
 namespace PassByRefTristanR
 {
-	public partial class Form1 : Form
+	public partial class numNumberOfPlaces : Form
 	{
-		public Form1()
+		public numNumberOfPlaces()
 		{
 			InitializeComponent();
 		}
@@ -28,10 +28,27 @@ namespace PassByRefTristanR
 		//Input: ref txtNumber , int numberOfPlaces
 		//Output: void
 		//Description: This procedure takes the decimal given by the user and rounds it to the places that the user wants.
-		private void RoundDecimal (ref Double decimalNumber , int numOfPlaces)
+		public void RoundDecimal (ref double userDecimal , int numOfPlaces)
 		{
-			}
+			userDecimal = userDecimal * Math.Pow(10, numOfPlaces) ;
+			userDecimal = userDecimal + 0.5;
+			Math.Truncate (userDecimal);
+			userDecimal = userDecimal / Math.Pow(10, numOfPlaces);
+
+			MessageBox.Show("The Rounded Number is " + userDecimal, "RoundedNumber");
+
+		}
 		private void button1_Click(object sender, EventArgs e)
+		{
+			double decimalNumber;
+			int numOfPlaces;
+
+			decimalNumber = Convert.ToDouble(txtDecimal.Text);
+			numOfPlaces = Convert.ToInt16(numNumOfPlaces.Value);
+			this.RoundDecimal(ref decimalNumber, numOfPlaces);
+		}
+		
+		private void txtDecimal_TextChanged(object sender, EventArgs e)
 		{
 
 		}

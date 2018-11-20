@@ -1,6 +1,6 @@
 ﻿namespace PassByRefTristanR
 {
-	partial class Form1
+	partial class numNumberOfPlaces
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -32,8 +32,8 @@
 			this.txtDecimal = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			this.numNumOfPlaces = new System.Windows.Forms.NumericUpDown();
+			((System.ComponentModel.ISupportInitialize)(this.numNumOfPlaces)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -52,6 +52,7 @@
 			this.txtDecimal.Name = "txtDecimal";
 			this.txtDecimal.Size = new System.Drawing.Size(100, 20);
 			this.txtDecimal.TabIndex = 1;
+			this.txtDecimal.TextChanged += new System.EventHandler(this.txtDecimal_TextChanged);
 			// 
 			// label1
 			// 
@@ -71,26 +72,26 @@
 			this.label2.TabIndex = 3;
 			this.label2.Text = "How many places do you want to round:";
 			// 
-			// numericUpDown1
+			// numNumOfPlaces
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(172, 67);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-			this.numericUpDown1.TabIndex = 4;
+			this.numNumOfPlaces.Location = new System.Drawing.Point(172, 67);
+			this.numNumOfPlaces.Name = "numNumOfPlaces";
+			this.numNumOfPlaces.Size = new System.Drawing.Size(100, 20);
+			this.numNumOfPlaces.TabIndex = 4;
 			// 
-			// Form1
+			// numNumberOfPlaces
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 261);
-			this.Controls.Add(this.numericUpDown1);
+			this.Controls.Add(this.numNumOfPlaces);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtDecimal);
 			this.Controls.Add(this.button1);
-			this.Name = "Form1";
+			this.Name = "numNumberOfPlaces";
 			this.Text = "Form1";
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numNumOfPlaces)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -102,7 +103,7 @@
 		private System.Windows.Forms.TextBox txtDecimal;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numNumOfPlaces;
 	}
 }
 
