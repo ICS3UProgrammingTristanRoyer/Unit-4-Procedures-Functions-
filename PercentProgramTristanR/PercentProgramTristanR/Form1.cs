@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Tristan  Royer
+ * Created on: 11 / 2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #33 - Percentage Program
+ * This program takes the partial level given by the user and displays the appropriate percentage.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +26,17 @@ namespace PercentProgramTristanR
 
 		private int ConvertToPercent(String mark)
 		{
+			// declare variable
 			int percentage;
 
+			// uses the cases function which checks the level the user entered and displays the appropriate percentage
 			switch (mark)
 			{
+
 				case "4++":
 					percentage = 98;
 					MessageBox.Show("The Percentage is:" + percentage, "PercentMark");
+					// breaks the cases preventing it from continuing if the answer is found.
 					break;
 
 				case "4+":
@@ -123,6 +134,7 @@ namespace PercentProgramTristanR
 					break;
 
 			}
+			// returns the percentage
 			return percentage;
 
 			
@@ -137,10 +149,13 @@ namespace PercentProgramTristanR
 
 		private void btnCalculate_Click(object sender, EventArgs e)
 		{
+			// declares the variables
 			String level;
 
+			// assigns the txtMark's text to the level variables
 			level = txtMark.Text;
 
+			// calls the procedure.
 			ConvertToPercent( level);
 
 

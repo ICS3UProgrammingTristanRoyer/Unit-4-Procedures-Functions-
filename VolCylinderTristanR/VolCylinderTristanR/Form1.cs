@@ -24,7 +24,7 @@ namespace VolCylinderTristanR
 			InitializeComponent();
 		}
 		// creates a function that calculates the volume of a cylinder with the given height and radius
-		private double CalculateVolume (double height , double radius , ref double volume)
+		public double CalculateVolume (double height , double radius , ref double volume)
 		{
 			
 			// calculates the volume and returns it.

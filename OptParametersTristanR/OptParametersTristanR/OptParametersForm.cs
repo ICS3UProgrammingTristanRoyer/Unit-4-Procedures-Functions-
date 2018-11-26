@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Tristan Royer
+ * Created on: 11 / 2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #31 - Rounding Program
+ * This program displays the user's given address in a message box.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +24,26 @@ namespace OptParametersTristanR
 			InitializeComponent();
 		}
 
+		// function which displays all the details of the user's address including the user's apt number.
 		public void DisplayAddress(String aptNumber , string streetAddress , string city , string province , string postalCode)
 		{ MessageBox.Show("Your Address is:"
 		+ aptNumber + " , "
 		+ streetAddress + " , "
 		+ city + " , "
 		+ province + " , "
-		+ postalCode);
+		+ postalCode, "Address");
 		}
 
+		// function which displays all the details of the user's addressw without the user's apt number
 		public void DisplayAddress( string streetAddress, string city, string province, string postalCode)
 		{
 			MessageBox.Show("Your Address is:"
 		  +  streetAddress + " , "
 		  +  city + " , "
 		  +  province + " , "
-		  +  postalCode);
+		  +  postalCode , "Address");
 		}
+
 
 		private void btnAddress_Click(object sender, EventArgs e)
 		{
@@ -65,10 +75,12 @@ namespace OptParametersTristanR
 			{
 				MessageBox.Show("Please enter your Postal Code", "AddressDisplay");
 			}
+			// if the user does not enter their apt number display a message box with all the other details
 			else if (userAptNumber == "")
 			{
 				DisplayAddress(userStreetAddress, userCity, userProvince, userPostalCode);
 			}
+			// if the user enters their apt number display all the details.
 			else
 				DisplayAddress(userAptNumber, userStreetAddress, userCity, userProvince, userPostalCode);
 
