@@ -28,12 +28,13 @@ namespace PassByRefTristanR
 		//Input: ref txtNumber , int numberOfPlaces
 		//Output: void
 		//Description: This procedure takes the decimal given by the user and rounds it to the places that the user wants.
-		private double RoundDecimal (ref double userDecimal , int numOfPlaces)
+	    private double RoundDecimal (ref double userDecimal , double numberOfPlaces)
 		{
-			userDecimal = userDecimal * Math.Pow(10, numOfPlaces);
-			userDecimal = userDecimal + 0.5;
+			
+			
+			userDecimal = userDecimal * Math.Pow(10, numberOfPlaces) + 0.5;
 			Math.Truncate(userDecimal);
-			userDecimal = userDecimal / Math.Pow(10, numOfPlaces);
+			userDecimal = userDecimal / Math.Pow(10, numberOfPlaces);
 
 			return userDecimal;
 			
@@ -42,11 +43,14 @@ namespace PassByRefTristanR
 		}
 		private void button1_Click(object sender, EventArgs e)
 		{
+			// declare variabls
 			double decimalNumber;
-			int numOfPlaces;
+			double numOfPlaces;
 			decimalNumber = Convert.ToDouble(txtDecimal.Text);
-			numOfPlaces = Convert.ToInt16(numNumOfPlaces.Value);
-			RoundDecimal(ref decimalNumber, numOfPlaces);
+			numOfPlaces = (Double)(numNumOfPlaces.Value);
+			RoundDecimal (ref decimalNumber, numOfPlaces);
+
+			// show the message box
 			MessageBox.Show("The Rounded Number is " + decimalNumber, "RoundedNumber");
 
 		}
