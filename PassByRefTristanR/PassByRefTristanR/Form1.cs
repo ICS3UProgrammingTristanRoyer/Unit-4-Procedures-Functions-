@@ -33,7 +33,7 @@ namespace PassByRefTristanR
 			
 			
 			userDecimal = userDecimal * Math.Pow(10, numberOfPlaces) + 0.5;
-			Math.Truncate(userDecimal);
+			userDecimal = Math.Truncate(userDecimal);
 			userDecimal = userDecimal / Math.Pow(10, numberOfPlaces);
 
 			return userDecimal;
@@ -47,8 +47,10 @@ namespace PassByRefTristanR
 			double decimalNumber;
 			double numOfPlaces;
 			decimalNumber = Convert.ToDouble(txtDecimal.Text);
-			numOfPlaces = (Double)(numNumOfPlaces.Value);
+			numOfPlaces = (double)(this.numNumOfPlaces.Value);
 			RoundDecimal (ref decimalNumber, numOfPlaces);
+			
+
 
 			// show the message box
 			MessageBox.Show("The Rounded Number is " + decimalNumber, "RoundedNumber");

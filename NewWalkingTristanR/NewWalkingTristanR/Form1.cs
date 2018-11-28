@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace NewWalkingTristanR
 {
@@ -14,8 +15,10 @@ namespace NewWalkingTristanR
 	{
 		public Form1()
 		{
+
 			InitializeComponent();
 			this.lblInstructions.Hide();
+
 
 		}
 
@@ -71,7 +74,7 @@ namespace NewWalkingTristanR
 			// write a message to the console to check which picture box was clicked
 			Console.WriteLine("Picture box (" + tmpPicMan.Location.X + " ," + tmpPicMan.Location.Y + ") was clicked.");
 
-			// declare locla variables and constants
+			// declare local variables and constants
 			const byte MAX_FRAMES = 10;
 			int pictureFrameCounter = 1;
 
@@ -83,53 +86,55 @@ namespace NewWalkingTristanR
 						tmpPicMan.Image = Properties.Resources.walk1;
 
 					}
-				if (pictureFrameCounter == 2)
+				else if (pictureFrameCounter == 2)
 					{
 						tmpPicMan.Image = Properties.Resources.walk2;
 
 					}
-				if (pictureFrameCounter == 3)
+				else if (pictureFrameCounter == 3)
 					{
 						tmpPicMan.Image = Properties.Resources.walk3;
 
 					}
-				if (pictureFrameCounter == 4)
+				else if (pictureFrameCounter == 4)
 					{
 					tmpPicMan.Image = Properties.Resources.walk4;
 
 					}
-				if (pictureFrameCounter == 5)
+				else if (pictureFrameCounter == 5)
 					{
 					tmpPicMan.Image = Properties.Resources.walk5;
 	
 					}
-				if (pictureFrameCounter == 6)
+				else if (pictureFrameCounter == 6)
 					{
 					tmpPicMan.Image = Properties.Resources.walk6;
 
 					}
-				if (pictureFrameCounter == 7)
+				else if (pictureFrameCounter == 7)
 					{
 					tmpPicMan.Image = Properties.Resources.walk7;
 		
 					}
-				if (pictureFrameCounter == 8)
+				else if (pictureFrameCounter == 8)
 					{
 					tmpPicMan.Image = Properties.Resources.walk8;
 
 					}
-				if (pictureFrameCounter == 9)
+				else if (pictureFrameCounter == 9)
 					{
 					tmpPicMan.Image = Properties.Resources.walk9;
 
-					}
-				if (pictureFrameCounter == 10)
+				}
+				else if (pictureFrameCounter == 10)
 					{
 						tmpPicMan.Image = Properties.Resources.walk10;
 
 					}
 
-
+				pictureFrameCounter = pictureFrameCounter + 1;
+				this.Refresh();
+				Thread.Sleep(100);
 			}
 	}
 	}
