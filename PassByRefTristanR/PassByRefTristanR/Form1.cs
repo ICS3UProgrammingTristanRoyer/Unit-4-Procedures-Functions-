@@ -31,11 +31,12 @@ namespace PassByRefTristanR
 	    private double RoundDecimal (ref double userDecimal , double numberOfPlaces)
 		{
 			
-			
+			// round the decimal the the number of places requested
 			userDecimal = userDecimal * Math.Pow(10, numberOfPlaces) + 0.5;
 			userDecimal = Math.Truncate(userDecimal);
 			userDecimal = userDecimal / Math.Pow(10, numberOfPlaces);
 
+			// return the value of the decimal
 			return userDecimal;
 			
 
@@ -43,11 +44,13 @@ namespace PassByRefTristanR
 		}
 		private void button1_Click(object sender, EventArgs e)
 		{
-			// declare variabls
+			// declare variables
 			double decimalNumber;
 			double numOfPlaces;
+			// assign the values the user entered to the variables
 			decimalNumber = Convert.ToDouble(txtDecimal.Text);
 			numOfPlaces = (double)(this.numNumOfPlaces.Value);
+			// call the function
 			RoundDecimal (ref decimalNumber, numOfPlaces);
 			
 

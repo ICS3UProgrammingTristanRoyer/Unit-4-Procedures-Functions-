@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Tristan Royer
+ * Created on: 29-11-2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #32 - Name of Program
+ * This program this creates picture boxes during runtime and allows the user to click on them to make them change.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
